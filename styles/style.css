@@ -93,12 +93,6 @@ header {
   margin: 0 auto;
 }
 
-@media screen and (min-width: 480px) {
-  .container {
-    /* max-width: 396px; */
-  }
-}
-
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
@@ -116,35 +110,68 @@ header {
   justify-content: space-between;
 }
 @media screen and (max-width: 767px) {
+  .navigation-link {
+    padding-top: 24px;
+    padding-bottom: 22px;
+  }
+  .navigation > .logo {
+    padding-top: 24px;
+    padding-bottom: 22px;
+  }
 }
 @media screen and (min-width: 768px) {
-  .header-container {
-  }
   .adress-list {
-    margin-left: 118px;
+    padding-top: 23px;
+    padding-bottom: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
   .adress-item:first-child {
-    padding-top: 20px;
+    /* padding-top: 20px; */
+  }
+  .navigation-link {
+    padding-top: 24px;
+    padding-bottom: 22px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .adress-link {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.04em;
+    color: #434455;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .header-container {
-  }
   .adress-item:not(:last-child) {
     margin-right: 40px;
   }
   .adress-item {
     padding-top: 24px;
-    padding-bottom: 24px;
+    padding-bottom: 28px;
   }
+
   .adress-list {
-    margin-left: 0;
+    padding-top: 0;
+    padding-bottom: 0;
     display: flex;
     flex-direction: row;
+  }
+  .navigation-link {
+    padding-top: 24px;
+    padding-bottom: 28px;
+
+    position: relative;
+  }
+  .adress-link {
+    color: rgba(67, 68, 85, 1);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
   }
 }
 .navigation {
@@ -157,13 +184,10 @@ header {
   display: flex;
   align-items: center;
 }
-
 .navigation-link {
-  padding-top: 24px;
-  padding-bottom: 24px;
-
   position: relative;
 }
+
 .navigation-link:not(:last-child) {
   margin-right: 40px;
 }
@@ -208,8 +232,6 @@ header {
   line-height: 1.33; /* 24/18 */
   text-decoration: none;
   color: rgba(46, 47, 66, 1);
-  padding-top: 24px;
-  padding-bottom: 24px;
 }
 .logo-first-part {
   color: rgba(77, 90, 229, 1);
@@ -217,9 +239,6 @@ header {
 
 .adress-link {
   color: rgba(67, 68, 85, 1);
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
   transition: color var(--transition-250);
 }
 .adress-link:hover,
@@ -228,6 +247,24 @@ header {
 }
 
 /* Mobile menu */
+@media screen and (max-width: 440px) {
+  .mobile-menu {
+    width: 440px;
+    transform: scale(0.75) translate(-15%, -15%);
+  }
+  .mobile-close-btn {
+    z-index: 1;
+  }
+}
+@media screen and (max-width: 375px) {
+  .mobile-menu {
+    width: 440px;
+    transform: scale(0.65) translate(-25%, -25%);
+  }
+  .mobile-close-btn {
+    z-index: 1;
+  }
+}
 
 @media screen and (max-width: 767px) {
   .navigation-list,
@@ -909,7 +946,6 @@ header {
   .advantages-list {
     margin-left: auto;
     margin-right: auto;
-    min-width: 768px;
     padding-left: 0;
     padding-right: 0;
 
@@ -944,7 +980,6 @@ header {
     letter-spacing: 0.02em;
     text-transform: capitalize;
     color: #2e2f42;
-    margin-bottom: 8px;
   }
   .advantages-item-text {
     color: #434455;
@@ -1386,10 +1421,93 @@ header {
   transform: translate(0, 0);
 }
 /* MODAL WINDOW */
+@media screen and (max-width: 440px) {
+  .modal {
+    /* width: 305px;
+    padding-left: 20px;
+    padding-right: 20px; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding-bottom: 24px;
 
-@media screen and (max-width: 767px) {
+    transform: translate(-50%, -50%) scale(0.7);
+  }
+
+  /* .modal-proposal {
+    margin-top: 52px;
+    margin-bottom: 12px;
+  }
+  .sign-up-form {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .sign-up-labels {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #8e8f99;
+  }
+  .sign-up-inputs {
+    width: 260px;
+    height: 30px;
+  }
+  .sign-up-comment {
+    width: 260px;
+    height: 80px;
+  }
+  .checkbox-label {
+    width: 260px;
+    height: 16px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .sign-up-button {
+    padding: 10px 24px;
+    width: 110px;
+    height: 34px;
+  } */
+}
+@media screen and (min-width: 440px) {
   .modal {
     width: 392px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    padding-bottom: 24px;
+
+    transform: scale(1) translate(-50%, -50%);
+  }
+  .modal-proposal {
+    margin-top: 72px;
+    margin-bottom: 16px;
+  }
+  .sign-up-form {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .sign-up-inputs {
+    width: 360px;
+    height: 40px;
+  }
+  .sign-up-comment {
+    width: 360px;
+    height: 120px;
+  }
+  .checkbox-label {
+    width: 360px;
+    height: 16px;
+  }
+  .sign-up-button {
+    padding: 16px 32px;
+    width: 169px;
+    height: 56px;
   }
 }
 
@@ -1419,12 +1537,6 @@ header {
 }
 .modal {
   position: absolute;
-  top: 50%;
-  left: 50%;
-
-  padding-bottom: 24px;
-
-  transform: translate(-50%, -50%);
 
   background-color: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -1469,20 +1581,42 @@ header {
   fill: #ffffff;
 }
 .modal-proposal {
-  margin-top: 72px;
-  margin-bottom: 16px;
   text-align: center;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
 }
+.modal-proposal {
+  margin-top: 72px;
+  margin-bottom: 16px;
+}
+.sign-up-form {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+.sign-up-inputs {
+  width: 360px;
+  height: 40px;
+}
+.sign-up-comment {
+  width: 360px;
+  height: 120px;
+}
+.checkbox-label {
+  width: 360px;
+  height: 16px;
+}
+.sign-up-button {
+  padding: 16px 32px;
+  width: 169px;
+  height: 56px;
+}
 .sign-up-form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0px;
-  padding-left: 24px;
-  padding-right: 24px;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 .sign-up-labels {
   display: flex;
@@ -1502,8 +1636,6 @@ header {
   position: relative;
 }
 .sign-up-inputs {
-  width: 360px;
-  height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   padding-left: 38px;
@@ -1534,8 +1666,6 @@ header {
 }
 
 .sign-up-comment {
-  width: 360px;
-  height: 120px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   resize: none;
@@ -1554,8 +1684,6 @@ header {
   color: rgba(117, 117, 117, 0.5);
 }
 .checkbox-label {
-  width: 360px;
-  height: 16px;
   margin-top: 16px;
   display: flex;
   font-weight: 400;
@@ -1574,9 +1702,6 @@ header {
 }
 
 .sign-up-button {
-  padding: 16px 32px;
-  width: 169px;
-  height: 56px;
   background: #4d5ae5;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
